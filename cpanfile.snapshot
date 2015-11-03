@@ -1,5 +1,26 @@
 # carton snapshot format: version 1.0
 DISTRIBUTIONS
+  Class-Method-Modifiers-2.11
+    pathname: E/ET/ETHER/Class-Method-Modifiers-2.11.tar.gz
+    provides:
+      Class::Method::Modifiers 2.11
+    requirements:
+      B 0
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      base 0
+      strict 0
+      warnings 0
+  Devel-GlobalDestruction-0.13
+    pathname: H/HA/HAARG/Devel-GlobalDestruction-0.13.tar.gz
+    provides:
+      Devel::GlobalDestruction 0.13
+    requirements:
+      ExtUtils::CBuilder 0.27
+      ExtUtils::MakeMaker 0
+      Sub::Exporter::Progressive 0.001011
+      perl 5.006
   Encode-Locale-1.05
     pathname: G/GA/GAAS/Encode-Locale-1.05.tar.gz
     provides:
@@ -185,6 +206,47 @@ DISTRIBUTIONS
       Text::ParseWords 0
       perl 5.008000
       version 0.87
+  Module-Runtime-0.014
+    pathname: Z/ZE/ZEFRAM/Module-Runtime-0.014.tar.gz
+    provides:
+      Module::Runtime 0.014
+    requirements:
+      Module::Build 0
+      Test::More 0
+      perl 5.006
+      strict 0
+      warnings 0
+  Moo-2.000002
+    pathname: H/HA/HAARG/Moo-2.000002.tar.gz
+    provides:
+      Method::Generate::Accessor undef
+      Method::Generate::BuildAll undef
+      Method::Generate::Constructor undef
+      Method::Generate::DemolishAll undef
+      Method::Inliner undef
+      Moo 2.000002
+      Moo::HandleMoose undef
+      Moo::HandleMoose::FakeConstructor undef
+      Moo::HandleMoose::FakeMetaClass undef
+      Moo::HandleMoose::_TypeMap undef
+      Moo::Object undef
+      Moo::Role 2.000002
+      Moo::_Utils undef
+      Moo::_mro undef
+      Moo::_strictures undef
+      Moo::sification undef
+      Sub::Defer 2.000002
+      Sub::Quote 2.000002
+      oo undef
+    requirements:
+      Class::Method::Modifiers 1.1
+      Devel::GlobalDestruction 0.11
+      Exporter 5.57
+      ExtUtils::MakeMaker 0
+      Module::Runtime 0.014
+      Role::Tiny 2
+      Scalar::Util 0
+      perl 5.006
   Net-HTTP-6.09
     pathname: E/ET/ETHER/Net-HTTP-6.09.tar.gz
     provides:
@@ -200,6 +262,14 @@ DISTRIBUTIONS
       IO::Uncompress::Gunzip 0
       URI 0
       perl 5.006002
+  Role-Tiny-2.000001
+    pathname: H/HA/HAARG/Role-Tiny-2.000001.tar.gz
+    provides:
+      Role::Tiny 2.000001
+      Role::Tiny::With 2.000001
+    requirements:
+      Exporter 5.57
+      perl 5.006
   Scope-Guard-0.21
     pathname: C/CH/CHOCOLATE/Scope-Guard-0.21.tar.gz
     provides:
@@ -208,6 +278,13 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test::More 0
       perl 5.006001
+  Sub-Exporter-Progressive-0.001011
+    pathname: F/FR/FREW/Sub-Exporter-Progressive-0.001011.tar.gz
+    provides:
+      Sub::Exporter::Progressive 0.001011
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0.88
   Term-Encoding-0.02
     pathname: M/MI/MIYAGAWA/Term-Encoding-0.02.tar.gz
     provides:
