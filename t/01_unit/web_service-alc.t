@@ -2,20 +2,31 @@ use common::sense;
 
 use Test::More;
 use Test::Pretty;
+use Encode qw(encode_utf8);
 
 my $class = 'Anki::WebService::Alc';
 use_ok $class;
 
 subtest ua => sub {
     my $c = $class->new;
-    isa_ok $c->ua, 'LWP::UserAgent';
+    isa_ok $c->ua, 'Mojo::UserAgent';
 };
 subtest create_search_req => sub {
-    my $req = $class->create_search_req('test');
-    isa_ok $req, 'HTTP::Request';
-    isa_ok $req->uri, 'URI';
-    is $req->uri->host, 'eow.alc.co.jp';
-    is $req->uri->path, '/search';
+    my $uri = $class->create_search_uri('test');
+    isa_ok $uri, 'URI';
+    is $uri->host, 'eow.alc.co.jp';
+    is $uri->path, '/search';
+};
+subtest do_request => sub {
+    my $requester = $class->new;
+    my $res       = $requester->do_request('word');
+
+    isa_ok $res, 'Mojo::Message::Response';
+};
+subtest parse_definition => sub {
+    my $requester = $class->new;
+    my $res       = $requester->do_request('word');
+    isa_ok $requester->parse_definition($res), 'Mojo::DOM';
 };
 
 done_testing;
