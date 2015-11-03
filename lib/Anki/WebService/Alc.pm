@@ -7,6 +7,13 @@ use URI;
 use HTTP::Request::Common qw(GET);
 use constant BASE_URL => 'http://eow.alc.co.jp/search';
 
+has ua => (
+    is      => 'ro',
+    default => sub {
+        my $ua = LWP::UserAgent->new;
+    },
+);
+
 sub create_search_req {
     my ($class, $word) = @_;
 
