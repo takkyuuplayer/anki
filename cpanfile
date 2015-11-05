@@ -1,5 +1,5 @@
 requires 'common::sense';
-requires 'Mojo::UserAgent';
+requires 'LWP::UserAgent';
 requires 'Moo';
 requires 'Test::Pretty';
 requires 'URI';
