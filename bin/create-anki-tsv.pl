@@ -22,8 +22,11 @@ while (<>) {
     $res = $dejizo->do_request($req);
 
     if ($res->decoded_content =~ /<div>(.*?)<\/div>/) {
-        say join("\t", $_, $1);
+        my $content = $1;
+        $content =~ s/\r|\n//g;
+        $content =~ s|\s+| |g;
+        say join("\t", $_, $content);
     }
 
-    sleep 1 if $counter++ % 20 == 0;
+    #sleep 1 if $counter++ % 20 == 0;
 }
