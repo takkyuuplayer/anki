@@ -34,7 +34,7 @@ sub do_request {
 sub parse_definition {
     my ($class, $res) = @_;
 
-    $res->dom('#resultsList > ul > li')->first;
+    $res->dom('#resultsList > ul > li > div')->first;
 }
 
 1;
