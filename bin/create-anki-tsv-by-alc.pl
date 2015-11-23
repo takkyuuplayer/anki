@@ -24,6 +24,4 @@ while (<>) {
     else {
         say join("\t", $_, 'N/A: Please define manually');
     }
-
-    sleep 30;
 }

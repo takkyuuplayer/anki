@@ -149,6 +149,20 @@ DISTRIBUTIONS
       Encode 2.10
       Exporter 5.57
       ExtUtils::MakeMaker 6.30
+  IO-Socket-Socks-0.67
+    pathname: O/OL/OLEG/IO-Socket-Socks-0.67.tar.gz
+    provides:
+      IO::Socket::Socks 0.67
+      IO::Socket::Socks::Debug 0.67
+      IO::Socket::Socks::Error 0.67
+      IO::Socket::Socks::ReadOnlyVar 0.67
+      IO::Socket::Socks::SocketClassVar 0.67
+    requirements:
+      ExtUtils::MakeMaker 6.52
+      IO::Select 0
+      Socket 1.94
+      Test::More 0.88
+      constant 1.03
   LWP-MediaTypes-6.02
     pathname: G/GA/GAAS/LWP-MediaTypes-6.02.tar.gz
     provides:

@@ -10,6 +10,9 @@ use_ok $class;
 subtest ua => sub {
     my $c = $class->new;
     isa_ok $c->ua, 'Mojo::UserAgent';
+    isa_ok $c->ua->proxy, 'Mojo::UserAgent::Proxy';
+    is $c->ua->proxy->http,  'socks://127.0.0.1:9050';
+    is $c->ua->proxy->https, 'socks://127.0.0.1:9050';
 };
 subtest create_search_req => sub {
     my $uri = $class->create_search_uri('test');
