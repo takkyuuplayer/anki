@@ -1,15 +1,18 @@
 use common::sense;
 
-use feature qw(say);
 use Anki::WebService::Alc;
 
 my $alc = Anki::WebService::Alc->new;
 
 while (<>) {
-    my $res = $alc->do_request($_);
     chomp;
+    my $res;
+    for (my $i = 0; $i < 3; $i++) {
+        last if $res = $alc->do_request($_);
+    }
 
     unless ($res) {
+        warn join("\t", $_, 'N/A: Please define manually');
         say join("\t", $_, 'N/A: Please define manually');
         next;
     }
@@ -22,6 +25,7 @@ while (<>) {
         say join("\t", $_, $content);
     }
     else {
+        warn join("\t", $_, 'N/A: Please define manually');
         say join("\t", $_, 'N/A: Please define manually');
     }
 }
