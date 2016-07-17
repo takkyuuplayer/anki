@@ -1,7 +1,9 @@
 use common::sense;
 
 use Anki::WebService::Alc;
+use IO::Handle;
 
+STDOUT->autoflush;
 my $alc = Anki::WebService::Alc->new;
 
 while (<>) {
@@ -13,7 +15,6 @@ while (<>) {
 
     unless ($res) {
         warn join("\t", $_, 'N/A: Please define manually');
-        say join("\t", $_, 'N/A: Please define manually');
         next;
     }
     my $definition = $alc->parse_definition($res);
@@ -26,6 +27,5 @@ while (<>) {
     }
     else {
         warn join("\t", $_, 'N/A: Please define manually');
-        say join("\t", $_, 'N/A: Please define manually');
     }
 }
