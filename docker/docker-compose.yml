@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    container_name: anki
+    build: .
+    volumes:
+      - ../:/srv/
+    environment:
+      - TZ=Asia/Tokyo
+    tty: true
+    command: bash
+    working_dir: /srv
+    links:
+      - proxy
+  proxy:
+    image: dperson/torproxy

@@ -10,7 +10,7 @@ has ua => (
     is      => 'ro',
     default => sub {
         my $ua = Mojo::UserAgent->new;
-        $ua->proxy->http('socks://127.0.0.1:9050')->https('socks://127.0.0.1:9050');
+        $ua->proxy->http('socks://proxy:9050')->https('socks://proxy:9050');
         $ua;
     },
 );
