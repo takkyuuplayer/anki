@@ -1,6 +1,7 @@
 requires 'common::sense';
 requires 'IO::Handle';
 requires 'IO::Socket::Socks';
+requires 'IO::Socket::SSL';
 requires 'LWP::UserAgent';
 requires 'Mojo::UserAgent';
 requires 'Moo';

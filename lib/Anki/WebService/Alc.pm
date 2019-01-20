@@ -2,7 +2,7 @@ package Anki::WebService::Alc;
 use common::sense;
 use Moo;
 
-use constant BASE_URL => 'http://eow.alc.co.jp/search';
+use constant BASE_URL => 'https://eow.alc.co.jp/search';
 use Mojo::UserAgent;
 use URI;
 
@@ -30,7 +30,7 @@ sub do_request {
 
     my $tx = $self->ua->build_tx(GET => $uri->as_string);
     $tx = $self->ua->start($tx);
-    $tx->success;
+    $tx->result;
 }
 
 sub parse_definition {
